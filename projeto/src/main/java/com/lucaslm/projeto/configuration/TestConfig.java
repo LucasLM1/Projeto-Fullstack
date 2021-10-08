@@ -1,5 +1,6 @@
 package com.lucaslm.projeto.configuration;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 import com.lucaslm.projeto.service.DBService;
 
 @Configuration
-@Profile("teste")
+@Profile("test")
 public class TestConfig {
 	
 	@Autowired
@@ -16,7 +17,7 @@ public class TestConfig {
 	
 	@Bean
 	public boolean instancia() {
-		this.dbService.InstanciaBaseDeDados();
+		dbService.InstanciaBaseDeDados();
 		return true;
 	}
 
