@@ -1,6 +1,8 @@
 package com.lucaslm.projeto.configuration;
 
 
+import java.text.ParseException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +18,7 @@ public class TestConfig {
 	private DBService dbService;
 	
 	@Bean
-	public boolean instancia() {
+	public boolean instancia() throws ParseException {
 		dbService.InstanciaBaseDeDados();
 		return true;
 	}

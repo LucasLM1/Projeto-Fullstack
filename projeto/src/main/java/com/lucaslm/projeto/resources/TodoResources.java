@@ -19,6 +19,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.lucaslm.projeto.domain.Todo;
 import com.lucaslm.projeto.service.TodoService;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping(value = "/todos")
 public class TodoResources {
