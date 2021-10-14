@@ -1,7 +1,21 @@
 .container{
     width: 85%;
     margin: auto;
+    margin-top:1.5rem;
 }
+
+.badge{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge button{
+    margin:auto;
+    width: 100%;
+}
+
 .content{
     width: 100%;
 }
@@ -29,4 +43,16 @@ p{
 
 .actions button{
     margin: .5rem;
+}
+
+.cardBG{
+    background-image:linear-gradient(210deg, #e9e5e5, #cbffff);
+}
+
+.txtData{
+    color: #1c1c1c;
+}
+
+.btnGreen{
+    background-color: #21b421;
 }
