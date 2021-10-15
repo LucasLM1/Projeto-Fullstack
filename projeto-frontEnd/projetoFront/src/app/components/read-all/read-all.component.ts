@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
+import { Router } from '@angular/router';
 import { Todo } from 'src/app/models/todo';
 import { TodoService } from 'src/app/services/todo.service';
 
@@ -18,7 +19,8 @@ export class ReadAllComponent implements OnInit {
 
 
   constructor(
-    private service: TodoService
+    private service: TodoService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -27,7 +29,7 @@ export class ReadAllComponent implements OnInit {
 
   findAll():void{
     this.service.findAll().subscribe((resposta) =>{
-      resposta.forEach(todo =>{
+      resposta.forEach((todo) =>{
         if(todo.finalizado){
           this.listFinished.push(todo);
         }
@@ -38,6 +40,15 @@ export class ReadAllComponent implements OnInit {
       // this.list = resposta;
       // this.countClosed();
       this.closed = this.listFinished.length
+    })
+  }
+
+  finalizarTask(item: Todo): void{
+    item.finalizado = true
+    this.service.update(item).subscribe(()=>{
+      this.service.message('Tarefa finalizada com sucesso!');
+        this.list = this.list.filter(todo => todo.id !== item.id);
+        this.closed++;
     })
   }
 
@@ -58,4 +69,8 @@ export class ReadAllComponent implements OnInit {
   //   }
   // }
 
+
+  finalizados():void{
+    this.router.navigate(['/finalizados'])
+  }
 }

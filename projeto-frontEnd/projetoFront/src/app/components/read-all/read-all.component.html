@@ -1,11 +1,8 @@
 <div class="container">
     <div class="badge">
-        <button class="mat-elevation-z8 cardBG" mat-stroked-button color="primary" matBadge="{{closed}}">Tarefas finalizadas</button>
+        <button (click)="finalizados()" class="mat-elevation-z8 cardBG" mat-stroked-button color="primary" matBadge="{{closed}}">Tarefas finalizadas</button>
     </div>
-
     <button class="newTodo mat-elevation-z8 cardBG" mat-stroked-button color="primary">Nova Tarefa</button>
-    
-
     <div class="content" *ngFor="let item of list">
         <mat-card class="mat-elevation-z8 cardBG">
             <p class="txtData">
@@ -17,7 +14,7 @@
             </mat-card-header>
 
             <div class="actions">
-                <button mat-mini-fab class="btnGreen"> <!--primary= azul-->
+                <button (click)="finalizarTask(item)" mat-mini-fab class="btnGreen"> <!--primary= azul-->
                     <mat-icon>done</mat-icon> <!--done = feito, seta de positivo-->
                 </button>
 
@@ -30,8 +27,5 @@
                 </button>
             </div>
         </mat-card>
-
-
-
     </div>
 </div>
