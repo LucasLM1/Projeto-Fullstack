@@ -5,5 +5,5 @@ mat-toolbar{
     margin-top: 2.5rem;
     bottom: 0;
     font-size: 1rem;
-    background-color: #fff;
+    background-image: linear-gradient(#a6cbe4, #fff);
 }

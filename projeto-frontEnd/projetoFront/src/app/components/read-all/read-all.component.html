@@ -2,15 +2,15 @@
     <div class="badge">
         <button (click)="finalizados()" class="mat-elevation-z8 cardBG" mat-stroked-button color="primary" matBadge="{{closed}}">Tarefas finalizadas</button>
     </div>
-    <button class="newTodo mat-elevation-z8 cardBG" mat-stroked-button color="primary">Nova Tarefa</button>
+    <button routerLink="create" class="newTodo mat-elevation-z8 cardBG" mat-stroked-button color="primary">Nova Tarefa</button>
     <div class="content" *ngFor="let item of list">
         <mat-card class="mat-elevation-z8 cardBG">
             <p class="txtData">
                 Data para finalizar: {{item.dataParaFinalizar }}
             </p>
             <mat-card-header>
-                <mat-card-title>{{ item.titulo }}</mat-card-title>
-                <mat-card-subtitle>{{ item.descricao }}</mat-card-subtitle>
+                <mat-card-title class="tittle">{{ item.titulo }}</mat-card-title>
+                <mat-card-subtitle class="txtSub">{{ item.descricao }}</mat-card-subtitle>
             </mat-card-header>
 
             <div class="actions">
@@ -22,7 +22,7 @@
                     <mat-icon>edit</mat-icon> <!--edit = editar, lapis-->
                 </button>
 
-                <button (click)="delete(item.id)" mat-mini-fab color="warn"> <!--warn= vermelho-->
+                <button (click)="delete(item.id)" mat-mini-fab class="btnRed"> <!--warn= vermelho-->
                     <mat-icon>delete</mat-icon> <!--delete = deletar, caixa de lixo-->
                 </button>
             </div>

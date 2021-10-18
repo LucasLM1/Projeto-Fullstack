@@ -49,14 +49,29 @@ p{
     margin: .5rem;
 }
 
+.tittle{
+    font-style: italic;
+}
+
+.txtSub{
+    font-weight: 550;
+    font-size: 18px;
+    font-style: italic;
+}
+
 .cardBG{
-    background-image:linear-gradient(210deg, #e9e5e5, #cbffff);
+    background-image:linear-gradient(210deg, #a6cbe4, #f1c573);
 }
 
 .txtData{
-    color: #1c1c1c;
+    color: #3a3838;
+    
 }
 
 .btnGreen{
     background-color: #21b421;
+}
+
+.btnRed{
+    background-color: #f31010;
 }
