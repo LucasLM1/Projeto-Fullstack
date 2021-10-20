@@ -1,5 +1,5 @@
-<form action="">
-    <h1>Criando nova Tarefa</h1>
+<form>
+    <h1>Atualizando Tarefa</h1>
 
     <mat-form-field class="dataFim" appearance="fill">
         <mat-label>Data para finalizar</mat-label>
@@ -10,7 +10,7 @@
 
     <div class="forms">
         <mat-form-field class="form" appearance="fill">
-            <mat-label autocomplete="none">Título</mat-label>
+            <mat-label>Título</mat-label>
             <input [(ngModel)]="todo.titulo" name="todo.titulo" matInput placeholder="Ex. Estudar" autocomplete="off">
         </mat-form-field>
     
@@ -21,7 +21,7 @@
     </div>
 
     <div class="buttons">
-        <button (click)="create()" mat-raised-button color="primary">Criar tarefa</button>
-        <button (click)="cancel()" mat-raised-button color="warn">Cancelar criação</button>
+        <button (click)="update()" mat-raised-button color="primary">Atualiar tarefa</button>
+        <button (click)="cancel()" mat-raised-button color="warn">Cancelar atualização</button>
     </div>
 </form>

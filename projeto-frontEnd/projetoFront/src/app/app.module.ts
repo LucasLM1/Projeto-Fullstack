@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     FooterComponent,
     ReadAllComponent,
     FinalizadosComponent,
-    CreateComponent
+    CreateComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

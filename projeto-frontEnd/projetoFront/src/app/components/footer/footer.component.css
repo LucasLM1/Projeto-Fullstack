@@ -1,9 +1,11 @@
-mat-toolbar{
-    position: fixed;
-    height: auto;
+footer{
+    /* position: fixed; */
+    /* height: auto; */
     justify-content: center;
-    margin-top: 2.5rem;
-    bottom: 0;
-    font-size: 1rem;
-    background-image: linear-gradient(#a6cbe4, #fff);
+    margin-top: 3.5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    /* bottom: 0; */
+    font-size: 1.1rem;
+    background-color: #a6cbe4;
 }
